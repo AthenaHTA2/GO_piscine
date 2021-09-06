@@ -1,1 +1,1 @@
-echo "hello sedmakh2@gmail.com!"
+echo "hello AthenaHTA2!"
