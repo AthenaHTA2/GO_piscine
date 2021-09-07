@@ -1,1 +1,1 @@
-ls -r | find -name '*.sh' | cut -d "." -f2 
+find . -typef -name "*sh" printf '%f/n' | cut -d "." -f1
