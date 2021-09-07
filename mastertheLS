@@ -1,2 +1,2 @@
-ls -cmp | sed 's/  / /g'
+ls -cmp | sed 's/ //g'
 
