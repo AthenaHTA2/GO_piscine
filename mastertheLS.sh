@@ -1,1 +1,0 @@
-ls -m | ls -lt --time=birth | cut -d ' ' -f 10- | cut -d ' ' -f 1- | tr piscine-go piscine-go/
