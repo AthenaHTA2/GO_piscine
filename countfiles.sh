@@ -1,1 +1,1 @@
-ls | wc -w
+ls | wc -w | cat -e
