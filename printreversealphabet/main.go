@@ -8,6 +8,5 @@ func main() {
 		z01.PrintRune(zRune)
 		zRune--
 	}
-
 	z01.PrintRune('\n')
 }
