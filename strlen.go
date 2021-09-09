@@ -5,6 +5,6 @@ func strLen(s string) int {
 	lenght := '0'
 	for _, letter := range RunesInStr {
 		lenght = lenght + letter
-		return int(lenght)
 	}
+	return int(lenght)
 }
