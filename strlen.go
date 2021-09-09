@@ -1,10 +1,10 @@
 package piscine
 
-func strLen(s string) int {
+func StrLen(s string) int {
 	RunesInStr := []rune(s)
-	lenght := '0'
-	for _, letter := range RunesInStr {
-		lenght = lenght + letter
+	length := 0
+	for range RunesInStr {
+		length = length + 1
 	}
-	return int(lenght)
+	return length
 }
