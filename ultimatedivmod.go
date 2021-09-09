@@ -1,6 +1,10 @@
 package piscine
 
 func UltimateDivMod(a *int, b *int) {
-	*b = *a % *b
-	*a = *a / *b
+	var x int
+	var y int
+	x = *a / *b
+	y = *a % *b
+	*a = x
+	*b = y
 }
