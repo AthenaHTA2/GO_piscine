@@ -1,19 +1,18 @@
 package piscine
 
-import (
-	"fmt"
-	"math"
-)
-
 func Sqrt(nb int) int {
-	rehersal := math.Sqrt(float64(nb))
-	modulo := rehersal - math.Round(rehersal)
+	var root int
 
-	if modulo != 0 {
-		return 0
-	} else {
-		fmt.Printf("rehersal is: %v\n", rehersal)
-		fmt.Printf("modulo is: %v\n", modulo)
+	for i := 1; i <= nb; i++ {
+
+		compare := i * i
+		modulo := compare % 1
+
+		if compare == nb && modulo != 0 {
+			root = i
+		} else {
+			root = 0
+		}
 	}
-	return int(rehersal)
+	return root
 }
