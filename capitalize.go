@@ -3,9 +3,9 @@ package piscine
 func Capitalize(s string) string {
 	Rune := []rune(s)
 
-	for _, v := range Rune {
-		if v >= 'A' || v <= 'Z' {
-			v = v + 32 // turn all into lower case
+	for i, v := range Rune {
+		if v >= 'A' && v <= 'Z' {
+			Rune[i] = v + 32 // turn all into lower case
 		}
 	}
 
