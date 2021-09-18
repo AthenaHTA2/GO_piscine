@@ -4,7 +4,7 @@ func MakeRange(min, max int) []int {
 	size := max - min
 	betweenMinAndMax := make([]int, 0)
 
-	if size <= 0 {
+	if max <= min {
 		negative := make([]int, 0)
 		betweenMinAndMax = negative
 
