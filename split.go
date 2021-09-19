@@ -3,7 +3,7 @@ package piscine
 func Split(s, sep string) []string {
 	rSlice := []rune(s)
 	rSep := []rune(sep)
-	word := []rune()
+	var word []rune
 	var newSlice []string
 	var start rune
 	var end rune
