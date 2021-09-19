@@ -10,7 +10,7 @@ func PrintWordsTables(a []string) {
 		if i < len(a) {
 			rSlice = []rune(a[i])
 			line = append(rSlice, '\n')
-			for i, _ := range line {
+			for i := range line {
 				z01.PrintRune(line[i])
 			}
 		} else {
