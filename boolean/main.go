@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 
 	"github.com/01-edu/z01"
@@ -11,10 +10,12 @@ var (
 	evenMsg string = "I have an even number of arguments"
 	oddMsg  string = "I have an odd number of arguments"
 	mod     int
+	rString []rune
 )
 
 func printStr(s string) {
-	for _, r := range s {
+	rString = []rune(s)
+	for _, r := range rString {
 		z01.PrintRune(r)
 	}
 	z01.PrintRune('\n')
@@ -30,9 +31,9 @@ func isEven(nbr int) bool {
 }
 
 func main() {
-	if isEven(len(os.Args)-1) == true {
-		fmt.Println(evenMsg)
+	if isEven(len(os.Args) - 1) {
+		printStr(evenMsg)
 	} else {
-		fmt.Println(oddMsg)
+		printStr(oddMsg)
 	}
 }
