@@ -15,7 +15,7 @@ func main() {
 		return
 	}
 	if len(os.Args) == 2 {
-		fmt.Println("Almost there")
+		fmt.Println("Almost there!!")
 		return
 	}
 }
