@@ -1,6 +1,6 @@
 package piscine
 
-func Map(f func(int) bool, a []int) []int {
+func Map(f func(int) bool, a []int) []bool {
 	b := make([]bool, len(a))
 
 	for i, v := range a {
