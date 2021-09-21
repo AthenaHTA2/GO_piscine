@@ -1,32 +1,25 @@
 package piscine
 
 func Split(s, sep string) []string {
-	rSlice := []rune(s)
-	rSep := []rune(sep)
-	var word []rune
-	var newSlice []string
-	var start rune
-	var end rune
-	result := ""
-	for i := 0; i < len(rSlice); i++ {
-		if rSlice[i:i+len(rSep)-1] == rSep {
-			start = rSlice[i+len(rSep)]
-		}
-		for j := start; j < len(rSlice); j++ {
-			if rSlice[j:j+len(rSep)-1] == rSep {
-				end = rSlice[j-1]
+	var word string
+	var result []string
+
+	for i := 1; i <= len(s)-len(sep); i++ {
+		if s[i:i+len(sep)] == sep[0:] {
+			if word != "" {
+				result = append(result, word)
+				word = ""
 			}
 		}
-		word = rSlice[start:end]
-		if result != "" {
-			newSlice = append(newSlice, string(word))
-			result = ""
-		} else {
-			result = result + string(rSlice[i+len(sep)])
+		if s[i:i+len(sep)] != sep[0:] {
+			if i <= len(s)-len(sep) {
+				word = word + s[i:i+len(sep)]
+			} else if i <= len(s) {
+				word = word + string(s[i])
+			}
 		}
-		if i == len(rSlice)-1 {
-			newSlice = append(newSlice, result)
-		}
+
+		result = append(result, word)
 	}
-	return newSlice
+	return result
 }
