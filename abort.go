@@ -16,5 +16,4 @@ func Abort(a, b, c, d, e int) int {
 		}
 	}
 
-	return intSlice[2]
-}
+	return intSlice[3]
