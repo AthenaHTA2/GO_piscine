@@ -11,7 +11,7 @@ func Split(s, sep string) []string {
 			if word != "" {
 				result = append(result, word)
 				word = ""
-				i += sepLength - 1
+				i = i + (sepLength - 1)
 			}
 		} else {
 
