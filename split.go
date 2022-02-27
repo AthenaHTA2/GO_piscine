@@ -3,23 +3,24 @@ package piscine
 func Split(s, sep string) []string {
 	var word string
 	var result []string
+	var strLength int = len([]rune(s)) - 1
+	var sepLength int = len([]rune(sep))
 
-	for i := 1; i <= len(s)-len(sep); i++ {
-		if s[i:i+len(sep)] == sep[0:] {
+	for i := 0; i <= strLength-sepLength; i++ {
+		if s[i:i+sepLength] == sep[0:] {
 			if word != "" {
 				result = append(result, word)
 				word = ""
+				i += sepLength - 1
 			}
-		}
-		if s[i:i+len(sep)] != sep[0:] {
-			if i <= len(s)-len(sep) {
-				word = word + s[i:i+len(sep)]
-			} else if i <= len(s) {
-				word = word + string(s[i])
-			}
-		}
+		} else {
 
-		result = append(result, word)
+			word = word + string(s[i])
+		}
+		if i == strLength-sepLength {
+			word = word + string(s[i+1:])
+			result = append(result, word)
+		}
 	}
 	return result
 }
