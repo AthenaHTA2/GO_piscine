@@ -14,7 +14,6 @@ func Split(s, sep string) []string {
 				i = i + (sepLength - 1)
 			}
 		} else {
-
 			word = word + string(s[i])
 		}
 		if i == strLength-sepLength {
